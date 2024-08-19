@@ -21,6 +21,7 @@ namespace InterfaceAnimalEncyclopedia
             this.AnimalNames.Add("犬", "3");
             this.AnimalNames.Add("猫", "1");
             this.AnimalNames.Add("鳥", "2");
+            this.AnimalNames.Add("馬", "4");
             foreach (KeyValuePair<string, string> data in this.AnimalNames)
             {
                 comboBox1.Items.Add(data.Key);
@@ -29,8 +30,9 @@ namespace InterfaceAnimalEncyclopedia
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             IAnimal selectedAnimal = null;
-          
+
             switch (comboBox1.SelectedItem.ToString())
             {
                 case "犬":
@@ -41,6 +43,9 @@ namespace InterfaceAnimalEncyclopedia
                     break;
                 case "鳥":
                     selectedAnimal = new Bird();
+                    break;
+                case "馬":
+                    selectedAnimal = new Horse();
                     break;
                 default:
                     MessageBox.Show("動物を選んでください。");
