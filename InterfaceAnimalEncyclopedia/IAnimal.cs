@@ -34,5 +34,12 @@ namespace InterfaceAnimalEncyclopedia
             return "ピーピー";
         }
     }
+    public class Horse : IAnimal
+    {
+        public string MakeSound()
+        {
+            return "ヒヒーン";
+        }
+    }
 
 }
